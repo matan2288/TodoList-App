@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	outline: none;
+}
+
+body {
+	user-select: none;
+	background-image: linear-gradient(120deg, #dad4ec 0%, #f3e7e9 100%);
+}
+
+#AppContainer {
+	margin: 5vh 0 5vh 20%;
+	width: 55vw;
+	white-space: nowrap;
+	box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	perspective: 1px;
+	transform-style: preserve-3d;
+}
+
+#AppTitle {
+	font-family: Nunito;
+	text-align: center;
+	padding: 15px 0px 20px 0px;
+	color: white;
+}
+
+#AppHead {
+	height: 150px;
+	background: linear-gradient(0deg, rgb(252, 226, 111) 0%, rgb(255, 188, 5) 100%);
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+}
+
+#AppFooter {
+	height: 50px;
+	text-align: center;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	background: linear-gradient(0deg, rgb(255, 188, 5) 0%, rgb(252, 226, 111) 100%);
+}
+
+#FooterText {
+	font-weight: bold;
+	top: 22px;
+	position: relative;
+	font-size: 12px;
+}
+
+#InputAndBtnContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#TaskInput {
+	height: 50px;
+	border: none;
+	padding-right: 7vw;
+	font-size: 25px;
+	font-weight: bold;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	text-indent: 10px;
+	color: rgb(71, 70, 70);
+}
+
+#TaskInput::placeholder {
+	font-size: 18px;
+}
+
+#AddTaskBtn {
+	height: 50px;
+	padding: 0px 1vw 0px 1vw;
+	border: none;
+	cursor: pointer;
+	color: rgba(42, 42, 42, 0.904);
+	background: linear-gradient(to right, #fffbfbec, #ffbc04da);
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	font-weight: bold;
+}
+
+#AddTaskBtn:hover {
+	color: rgb(255, 244, 182);
+}
+
+#AddTaskBtn:active {
+	background: linear-gradient(to right, #ffbc04da, #ffe7a4d2);
+}
+
+#LiContainer {
+	background-color: none;
+}
+
+.NewLi {
+	padding: 15px;
+	font-size: 1.5vw;
+	background-color: rgb(252, 226, 111);
+	list-style: none;
+	cursor: pointer;
+	display: block;
+	color: rgb(71, 70, 70);
+}
+
+.NewLi:hover {
+	background-color: rgb(250, 229, 135);
+}
+
+.checkedLi {
+    text-decoration: line-through;
+  }
+  .checkedLi::after{
+    content: '✓';
+    color: green;
+  }
+
+
+.CloseBTN {
+	right: 5%;
+	position: absolute;
+}
+
+.CloseBTN:hover {
+	color: red;
+}
+
+
+@media (max-width: 1024px) {
+	#AppContainer {
+		width: 85vw;
+		margin: auto;
+		margin-top: 5%;
+	}
+	#TaskInput,
+	#AddTaskBtn {
+		font-size: 16px;
+	}
+	.NewLi {
+		font-size: 1.2em;
+	}
+	.CloseBTN {
+		right: 12%;
+	}
+}
+
+@media (max-width: 280px) {
+	#AppContainer {
+		width: 94vw;
+	}
+}
+
